@@ -19,8 +19,8 @@ int main() {
     swapalter (even, 8);
     printarray (even, 8);
     
-    swapalter (odd, 8);
-    printarray (odd, 8);
+    swapalter (odd, 5);
+    printarray (odd, 5);
     
     return 0;
 }
