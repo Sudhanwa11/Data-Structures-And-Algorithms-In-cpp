@@ -9,11 +9,11 @@ int Binarysearch (int arr[], int size, int element) {
         if (arr[mid] == element) {
             return mid;
         }
-        //right path
+        //to go right path
         if (element > arr[mid]) {
             start = mid + 1;
         }
-        //left path
+        //to go left path
         else {
            end = mid - 1; 
         }
