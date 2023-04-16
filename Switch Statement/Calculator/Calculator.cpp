@@ -1,7 +1,6 @@
 // Program to build a simple calculator using switch Statement
 #include <iostream>
 using namespace std;
-
 int main() {
     char oper;
     float num1, num2;
