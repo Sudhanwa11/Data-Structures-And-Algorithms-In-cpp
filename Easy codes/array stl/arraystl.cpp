@@ -11,4 +11,8 @@ int main() {
     cout<< "element at second " << a.at(2) <<endl;
     //to check whether an array is empty
     cout<< "empty or not " << a.empty() <<endl;
+    //to find first element of array
+    cout<< "first element is " << a.front() <<endl;
+    //to find last element of array
+    cout<< "last element is " << a.back() <<endl;
 }
