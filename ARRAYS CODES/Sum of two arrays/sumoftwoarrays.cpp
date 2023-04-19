@@ -12,8 +12,8 @@ vector<int> findArraySum(vector<int>&a, int n, vector<int>&b, int m) {
 		sum = sum%10;
 		ans.insert(ans.begin(),sum);
 		i--;
-    j--;
-    }
+		j--;
+        }
 	while(i>=0) {
 		int sum = a[i] + carry;
 		carry = sum/10;
