@@ -10,5 +10,5 @@ bool isPalindrome(string &s) {
 			end--;
 		}
 	}
-  return 1;
+        return 1;
 }
