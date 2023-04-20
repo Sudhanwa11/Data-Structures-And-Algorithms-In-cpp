@@ -1,1 +1,1 @@
-to print lenght of a string array
+to print length of a string array
