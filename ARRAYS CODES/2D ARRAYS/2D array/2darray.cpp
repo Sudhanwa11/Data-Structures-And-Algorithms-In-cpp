@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 bool isPresent (int arr[][4], int target, int row, int col) {
     for (int row=0; row<3; row++) {
         for (int col=0; col<4; col++) {
@@ -15,6 +14,7 @@ int main() {
     //to create 2D array
     int arr[3][4];
     //to take input row wise
+    cout<< "enter the elements"<<endl;
     for (int row=0; row<3; row++) {
         for (int col=0; col<4; col++) {
             cin >> arr[row][col];
@@ -29,6 +29,7 @@ int main() {
     }
     */
     //to print
+    cout<< "printing the "<<endl;
     for (int row=0; row<3; row++) {
         for (int col=0; col<4; col++) {
             cout<< arr[row][col] << " ";
