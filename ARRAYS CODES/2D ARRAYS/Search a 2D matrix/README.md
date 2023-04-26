@@ -6,4 +6,4 @@ Given an integer target, return true if target is in matrix or false otherwise.
 
 You must write a solution in O(log(m * n)) time complexity.
 
-https://assets.leetcode.com/uploads/2020/10/05/mat.jpg
+![image](https://user-images.githubusercontent.com/127226833/234575001-416c3af9-7a1b-4d28-8c04-3614317a31d0.png)
