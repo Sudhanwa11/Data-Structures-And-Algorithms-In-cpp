@@ -18,5 +18,13 @@ int main() {
     cout<< "size of pointer is " << sizeof(ptr) <<endl;
     cout<< "size of pointer is " << sizeof(p2) <<endl;
     
+    int i = 3;
+    int *t = &i;
+    cout<< (*t)++ <<endl; //&t = *t+1
+    
+    cout<< "before " << t <<endl;
+    t = t+1;
+    cout<< "after " << t <<endl;
+    
     return 0;
 }
