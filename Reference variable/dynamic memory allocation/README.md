@@ -3,6 +3,7 @@ The memory allocation is done either before or at the time of program execution.
  
 
 Compile-time or Static Memory Allocation
+
 Run-time or Dynamic Memory Allocation
 
 
