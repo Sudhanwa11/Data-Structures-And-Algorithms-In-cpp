@@ -1,6 +1,16 @@
 #include <iostream>
 using namespace std;
-
+/*
+int& func (int a) { ///avoid doing
+    int num = a;
+    int& ans = num;
+    return ans;
+}
+int* func (int n) {
+    int* ptr = n;
+    return ptr;
+}
+*/
 void update1 (int n) { //a copy variable created
     n++;
 }
