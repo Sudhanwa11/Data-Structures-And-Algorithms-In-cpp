@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
+
 int main() {
+
     int arr[10] = {23,122,41,67};
     
     cout<< "address of first memory block "<< arr <<endl;
@@ -13,7 +15,6 @@ int main() {
     
     int i = 3;
     cout << i[arr] <<endl; //67
-    
     
     int temp [10] = {1,2} ;
     cout<< sizeof(temp) <<endl;
@@ -39,5 +40,6 @@ int main() {
     cout<< &p <<endl;
     cout<< *p <<endl;
     */
+
     return 0;
 }
