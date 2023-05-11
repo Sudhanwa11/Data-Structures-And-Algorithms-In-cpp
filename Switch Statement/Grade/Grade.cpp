@@ -2,6 +2,7 @@
 using namespace std;
  
 int main () {
+
    // local variable declaration:
    char grade = 'D';
 
@@ -22,7 +23,8 @@ int main () {
       default :
          cout << "Invalid grade" << endl;
    }
+
    cout << "Your grade is " << grade << endl;
- 
+
    return 0;
 }
