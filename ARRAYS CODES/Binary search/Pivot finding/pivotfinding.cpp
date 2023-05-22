@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
+
 int getpivot (int arr[], int size) {
+
     int start = 0;
     int end = size - 1;
     int mid = start + (end - start)/2;
@@ -15,7 +17,10 @@ int getpivot (int arr[], int size) {
     }
     return start;
 }
+
+
 int main() {
+
     int arr[5] = {3,8,10,17,1};
     cout<< "Pivot is " << getpivot(arr, 5) <<endl;
 }
