@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
  
-
 int main () {
 
    // local variable declaration:
@@ -26,6 +25,7 @@ int main () {
    }
 
    cout << "Your grade is " << grade << endl;
+
 
    return 0;
 }
