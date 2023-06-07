@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+
 /*
 int& func (int a) { ///avoid doing
     int num = a;
@@ -12,6 +13,7 @@ int* func (int n) {
     return ptr;
 }
 */
+
 
 void update1 (int n) { //a copy variable created
     n++;
