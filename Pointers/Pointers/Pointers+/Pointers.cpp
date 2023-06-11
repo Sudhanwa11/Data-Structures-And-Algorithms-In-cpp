@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+
 int main() {
 
     int arr[10] = {23,122,41,67};
@@ -26,6 +27,7 @@ int main() {
     cout<< sizeof(ptr) <<endl; //address
     cout<< sizeof(*ptr) <<endl; //value present at address
     
+
     /*
     int a[20] = {1,2,3,5};
     //all show addresses
