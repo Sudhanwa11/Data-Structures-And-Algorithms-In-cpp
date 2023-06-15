@@ -5,10 +5,10 @@ int factorial (int n) {
     if (n == 0) {
         return 1;
     }
-    int followingnumber = factorial (n-1);
-    int firstnumber = n * followingnumber;
+    //int followingnumber = factorial (n-1);
+    //int firstnumber = n * followingnumber;
     
-    return firstnumber;
+    return n * factorial (n-1);
 }
 int main() {
     int n;
