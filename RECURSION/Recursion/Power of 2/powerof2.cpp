@@ -1,5 +1,7 @@
 #include <iostream>
 using namespace std;
+
+
 int power (int n) {
     //base case
     if (n == 0) {
