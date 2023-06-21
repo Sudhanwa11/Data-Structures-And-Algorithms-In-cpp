@@ -26,7 +26,7 @@ int partition (int arr[], int start, int end) {
     }
     return pivotindex;
 }
-void quickSort (int *arr, int start, int end) {
+void quickSort (int arr[], int start, int end) {
     //base case
     if (start >= end) {
         return ;
