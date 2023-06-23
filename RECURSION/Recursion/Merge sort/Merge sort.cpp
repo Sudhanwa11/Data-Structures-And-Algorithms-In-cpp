@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 void merge (int *arr, int start, int end) {
     int mid = (start+end)/2;
     
