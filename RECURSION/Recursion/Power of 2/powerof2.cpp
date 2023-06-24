@@ -11,6 +11,8 @@ int power (int n) {
     //int firstnumber = 2 * followingnumber;
     return 2 * power (n-1);
 }
+
+
 int main() {
     int n;
     cin>>n;
