@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 void print (int arr[], int size) {
     cout<< "size of array is-> " << size <<endl;
     for (int i=0; i<size; i++) {
@@ -7,6 +8,7 @@ void print (int arr[], int size) {
     }
     cout<<endl;
 }
+
 bool linearsearch (int arr[],int size,int key) {
     print (arr,size);
     //base case
