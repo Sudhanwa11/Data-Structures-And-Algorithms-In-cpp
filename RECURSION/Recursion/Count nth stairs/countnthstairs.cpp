@@ -1,4 +1,6 @@
 #include <bits/stdc++.h> 
+
+
 int countDistinctWays(int nStairs) {
     //tde exceeded
     if (nStairs < 0) {
