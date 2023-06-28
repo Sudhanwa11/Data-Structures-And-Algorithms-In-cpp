@@ -13,6 +13,8 @@ void sortArray (int *arr, int n) {
     }
     sortArray(arr, n-1);
 }
+
+
 int main() {
     int arr[5] = {2,5,1,6,9};
     sortArray (arr, 5);
