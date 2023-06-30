@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 void merge (int *arr, int start, int end) {
     int mid = (start+end)/2;
     
@@ -54,7 +53,6 @@ void mergeSort (int *arr, int start, int end) {
     //merge
     merge(arr, start, end);
 }
-
 int main() {
     int arr[5] = {32,2,10,11,6};
     int n = 5;
