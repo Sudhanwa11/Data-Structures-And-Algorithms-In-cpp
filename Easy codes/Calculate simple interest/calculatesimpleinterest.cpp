@@ -3,7 +3,6 @@
 using namespace std;
 
 int main() {
-    //Write your code here
     long int principal;
     float roi;
     int timeperiod;
