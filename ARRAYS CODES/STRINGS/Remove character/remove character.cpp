@@ -2,7 +2,6 @@
 #include <iostream>
 #include <cstring>
 using namespace std;
-
 string removeAllOccurrencesOfChar(string input, char c) {
     string ans;
     int n = input.size();
