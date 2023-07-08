@@ -1,7 +1,6 @@
 #include <bits/stdc++.h> 
 #include <iostream>
 using namespace std;
-
 class Car {
     public:
     string color;
@@ -14,6 +13,7 @@ class Car {
         cout << "noOfGear: " << this->noOfGear << endl << "color: " << this->color << endl;
     }
 };
+
 class RaceCar: public Car {
     public:
     int maxSpeed;
@@ -26,7 +26,6 @@ class RaceCar: public Car {
         cout << "noOfGear: " << noOfGear << endl << "color: " << color << endl << "maxSpeed: " << maxSpeed << endl;
     }
 };
-
 
 int main() {
     int noOfGear, maxSpeed;
