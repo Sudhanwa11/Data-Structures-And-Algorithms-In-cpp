@@ -1,4 +1,5 @@
 #include <bits/stdc++.h> 
+
 bool checkPalindrome(string s) {
     transform(s.begin(), s.end(), s.begin(), ::tolower);
     string str="";
