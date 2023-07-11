@@ -1,19 +1,21 @@
 #include <bits/stdc++.h> 
-int flipBits(int* arr, int n) {
-    int zeros = 0;
+int flipBits(int* arr, int n) 
+{
     int ones = 0;
-    int contiueZeros = 0;
-    for(int i=0;i<n;i++) {
-        if(arr[i]==0) {
-            zeros++;
+    int zeroes = 0;
+    int zerocount = 0;
+    for (int i=0; i<n; i++) {
+        if (arr[i] != 0) {
+            ones++;
+            zeroes--;
         }
         else {
-            zeros--;
-            ones++;
+            zeroes++;
         }
-        contiueZeros = max(contiueZeros,zeros);
-        if(zeros<0)
-        zeros=0;
+        zerocount = max(zerocount, zeroes);
+        if (zeroes < 0) {
+            zeroes = 0;
+        }
     }
-    return ones + contiueZeros;
+    return ones + zerocount;
 }
