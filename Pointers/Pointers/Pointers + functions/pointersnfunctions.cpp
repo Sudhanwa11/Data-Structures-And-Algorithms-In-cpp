@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 void print (int *p) {
     cout << *p << endl; //value 
     cout << p << endl; //address
