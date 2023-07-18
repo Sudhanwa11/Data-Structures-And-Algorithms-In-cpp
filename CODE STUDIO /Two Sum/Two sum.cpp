@@ -1,6 +1,5 @@
 #include <algorithm>
 #include <bits/stdc++.h>
-
 vector<pair<int,int>> twoSum(vector<int>& arr, int target, int n) { 
   vector<pair<int, int>>a;
 	sort(arr.begin(), arr.end());
