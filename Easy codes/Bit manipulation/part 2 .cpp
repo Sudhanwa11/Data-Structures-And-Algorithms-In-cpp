@@ -14,9 +14,22 @@ int numof1 (int n) {
     return count;
 }
 
+void subsets (int arr[], int n) {
+    for (int i=0; i < (1<<n); i++) {
+        for (int j=0; j<n; j++) {
+            if (i & (i<<j)) {
+                cout<< arr[j] << " ";
+            }
+        }
+        cout<< endl;
+    }
+}
+
 int main() {
     
     cout<< ispowerof2 (15) <<endl; //0
     cout<< numof1 (19) <<endl; //3
+    int arr[4] = {1,2,3,4};
+    subsets (arr, 4);
     return 0;
 }
