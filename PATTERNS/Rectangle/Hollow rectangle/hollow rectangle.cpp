@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
-
 int main(){
+
     int rows, column;
     cin>> rows>> column;
     for (int i=1; i<=rows; i++) {
