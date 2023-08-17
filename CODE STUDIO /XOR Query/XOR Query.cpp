@@ -1,6 +1,5 @@
 #include <bits/stdc++.h> 
-vector<int> xorQuery(vector<vector<int>> &queries)
-{
+vector<int> xorQuery(vector<vector<int>> &queries) {
     vector<int> ans;
     for (int i = 0; i < queries.size(); i++) {
 	   if (queries[i][0] == 1) {
