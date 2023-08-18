@@ -12,7 +12,6 @@ bool isPossible(vector<int> &stalls, int k, int mid) {
     }
     return false;
 }
-
 int aggressiveCows(vector<int> &stalls, int k) {
     //to sort array first
     sort(stalls.begin(), stalls.end());
