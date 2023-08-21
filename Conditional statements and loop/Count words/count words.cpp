@@ -2,11 +2,10 @@
 #include <iostream>
 #include <cstring>
 using namespace std;
-
 int countWords(string input) {
     int count = 0;
     for (int i=0; i<input.length() ;i++) {
-        if (input[i]== ' ') {
+        if (input[i] == ' ') {
             count++;
         }
     }
