@@ -1,7 +1,6 @@
 #include <bits/stdc++.h> 
 #include <iostream>
 using namespace std;
-
 int totalPrime (int S, int E) {
     int prime = 0;
     for (int i=S; i<=E; i++) {
