@@ -1,5 +1,6 @@
 #include <bits/stdc++.h> 
 string encode(string &message) {
+    
     int i=0, j = i+1;
     string encoded = "";
 
