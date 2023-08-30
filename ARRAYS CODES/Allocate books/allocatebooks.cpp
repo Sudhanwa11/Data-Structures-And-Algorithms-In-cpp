@@ -1,6 +1,4 @@
 #include <bits/stdc++.h> 
-
-
 bool isPossible (vector<int> arr, int n, int m, int mid) {
     int studentcount = 1;
     int pagesum = 0;
