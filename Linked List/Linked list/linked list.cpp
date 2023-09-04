@@ -24,6 +24,22 @@ void insertatTail (node* &tail, int value) {
     tail = temp;
 }
 
+void insertatposition (node* head, int position, int value) {
+    if (position == 1) {
+        insertatHead (head, 1);
+        return;
+    }
+    node* temp = head;
+    int count = 1;
+    while (count < position-1) {
+        temp = temp -> next;
+        count++;
+    }
+    node* insertnode = new node(value);
+    insertnode -> next = temp -> next;
+    temp -> next = insertnode; 
+}
+
 void printll (node* &head) {
     node* temp = head;
     while (temp != NULL) {
@@ -47,6 +63,9 @@ int main() {
     
     cout<< "inserting 20 at tail" <<endl;
     insertatTail (tail, 20);
+    printll (head);
+    
+    insertatposition (head, 2, 12);
     printll (head);
     
     return 0;
