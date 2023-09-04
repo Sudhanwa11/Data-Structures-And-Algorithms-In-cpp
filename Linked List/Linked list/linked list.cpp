@@ -24,17 +24,24 @@ void insertatTail (node* &tail, int value) {
     tail = temp;
 }
 
-void insertatposition (node* head, int position, int value) {
+void insertatposition (node* &head, node* &tail, int position, int value) {
     if (position == 1) {
-        insertatHead (head, 1);
+        insertatHead(head, 1);
         return;
     }
     node* temp = head;
     int count = 1;
+    
     while (count < position-1) {
         temp = temp -> next;
         count++;
     }
+    
+    if (temp -> next == NULL) {
+        insertatTail (tail, value);
+        return;
+    }
+    
     node* insertnode = new node(value);
     insertnode -> next = temp -> next;
     temp -> next = insertnode; 
@@ -51,22 +58,30 @@ void printll (node* &head) {
 
 int main() {
     node* node1 = new node(15);
-    cout<< node1 -> data <<endl;
-    cout<< node1 -> next <<endl;
     
     node* head = node1;
     node* tail = node1;
     
-    cout<< "inserting 10 at head" <<endl;
+    cout<< "inserting 10 at head:-" <<endl;
     insertatHead (head, 10);
     printll (head);
     
-    cout<< "inserting 20 at tail" <<endl;
+    cout<<endl;
+    
+    cout<< "inserting 20 at tail:-" <<endl;
     insertatTail (tail, 20);
     printll (head);
     
-    insertatposition (head, 2, 12);
-    printll (head);
+    cout<<endl;
+    
+    cout<< "inserting 25 at position 4:-" <<endl;
+    insertatposition (head, tail, 4, 25);
+    printll(head);
+    
+    cout<<endl;
+    
+    cout<< "head -> " << head -> data <<endl;
+    cout<< "tail -> " << tail -> data <<endl;
     
     return 0;
 }
