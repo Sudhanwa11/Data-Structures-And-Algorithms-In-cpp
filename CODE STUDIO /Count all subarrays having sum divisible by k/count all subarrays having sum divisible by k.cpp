@@ -1,6 +1,5 @@
 #include <bits/stdc++.h> 
 int subArrayCount(vector<int> &arr, int k) {
-
     unordered_map <int, int> reMap;
     reMap[0] = 1;
     long sum = 0;
