@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 class node {
     public:
     int data;
@@ -9,7 +10,39 @@ class node {
         this -> data = data;
         this -> next = NULL;
     }
+    
+    ~node () {
+        int value = this -> data;
+        if (this ->  next != NULL) {
+            delete next;
+            this -> next = NULL;
+        }
+        cout<< "Memory is freed of value " << value <<endl;
+    }
 };
+
+void deletion (node* &head, int position) {
+    if (position == 1) {
+        node* temp = head;
+        head = head -> next;
+        temp -> next = NULL;
+        delete temp;
+    }
+    else {
+        node* current = head;
+        node* previous = NULL;
+        int count = 1;
+        while (count < position) {
+            previous = current;
+            current = current -> next;
+            count++;
+        }
+        
+        previous -> next = current -> next;
+        current -> next = NULL;
+        delete current;
+    }
+}
 
 void insertatHead (node* &head, int value) {
     node* temp = new node(value);
@@ -82,5 +115,14 @@ int main() {
     cout<< "head -> " << head -> data <<endl;
     cout<< "tail -> " << tail -> data <<endl;
     
+    cout<<endl;
+    
+    deletion (head, 3);
+    printll (head);
+    
+    cout<<endl;
+    
+    cout<< "head -> " << head -> data <<endl;
+    cout<< "tail -> " << tail -> data <<endl;
     return 0;
 }
