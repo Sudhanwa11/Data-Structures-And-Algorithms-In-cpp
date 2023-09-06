@@ -33,6 +33,32 @@ void insertatTail (node* &tail, int value) {
     tail = temp;
 }
 
+//to insert a value at head of linked list
+void insertatanyposition (node* &head, node* &tail, int position, int value) {
+    if (position == 1) {
+        insertatHead(head, 1);
+        return;
+    }
+    node* temp = head;
+    int count = 1;
+    
+    while (count < position-1) {
+        temp = temp -> next;
+        count++;
+    }
+    
+    if (temp -> next == NULL) {
+        insertatTail (tail, value);
+        return;
+    }
+    
+    node* insertnode = new node(value);
+    insertnode -> next = temp -> next;
+    temp -> next -> previous = insertnode;
+    temp -> next = insertnode;
+    insertnode -> previous = temp;
+}
+
 //to print the linked list 
 void printll (node* &head) {
     node* temp = head;
@@ -60,7 +86,8 @@ int main() {
     node* tail = n1;
     
     insertatHead (head, 10);
-    insertatTail (tail, 20);
+    insertatTail (tail, 25);
+    insertatanyposition (head, tail, 3, 20);
     printll (head);
     
     cout << getlen(head) <<endl;
