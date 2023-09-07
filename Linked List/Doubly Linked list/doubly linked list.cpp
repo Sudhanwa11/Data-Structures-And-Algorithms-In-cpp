@@ -79,6 +79,8 @@ void printll (node* &head) {
         temp = temp -> next;
     }
     cout<<endl;
+    cout<< "HEAD:- " << head -> data <<endl;
+    cout<< "TAIL:- " << tail -> data <<endl;
 }
 
 //to get length of linked list
