@@ -19,10 +19,16 @@ class node {
 
 //to insert a value at head of linked list
 void insertatHead (node* &head, int value) {
-    node* temp = new node(value);
-    temp -> next = head;
-    head -> previous = temp;
-    head = temp;
+    if (head == NULL) {
+        node* temp = new node(value);
+        head = temp;
+    }
+    else {
+        node* temp = new node(value);
+        temp -> next = head;
+        head -> previous = temp;
+        head = temp;
+    }
 }
 
 //to insert a value at tail of linked list
