@@ -33,10 +33,16 @@ void insertatHead (node* &head, int value) {
 
 //to insert a value at tail of linked list
 void insertatTail (node* &tail, int value) {
-    node* temp = new node(value);
-    tail -> next = temp;
-    temp -> previous = tail;
-    tail = temp;
+    if (tail == NULL) {
+        node* temp = new node(value);
+        tail = temp;
+    }
+    else {
+        node* temp = new node(value);
+        tail -> next = temp;
+        temp -> previous = tail;
+        tail = temp;
+    }
 }
 
 //to insert a value at head of linked list
