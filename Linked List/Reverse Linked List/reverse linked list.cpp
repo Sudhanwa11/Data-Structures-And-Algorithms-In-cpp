@@ -15,7 +15,6 @@
         }
     };
 *****************************************************************/
-
 LinkedListNode<int> *reverseLinkedList(LinkedListNode<int> *head) {
     if (head == NULL || head -> next == NULL) {
         return head;
