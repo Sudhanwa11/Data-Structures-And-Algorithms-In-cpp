@@ -19,6 +19,7 @@ LinkedListNode<int> *reverseLinkedList(LinkedListNode<int> *head) {
     if (head == NULL || head -> next == NULL) {
         return head;
     }
+    
     LinkedListNode<int>* previous = NULL;
     LinkedListNode<int>* current = head;
     LinkedListNode<int>* forward = NULL;
