@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 int main() {
    //an example array taken
    int array [5] = {4,2,4,3,1};
