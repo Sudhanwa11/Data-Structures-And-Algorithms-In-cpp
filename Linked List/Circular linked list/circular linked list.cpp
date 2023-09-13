@@ -78,6 +78,42 @@ void printll (node* &tail) {
     } while (tail != temp);
 }
 
+bool iscircular (node* head) {
+    if (head == NULL) {
+        return true;
+    }
+    
+    node* temp = head -> next;
+    while (temp != NULL && temp != head) {
+        temp = temp -> next;
+    }
+    if (temp == head) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+bool detectloop (node* head) {
+    if (head == NULL) {
+        return false;
+    }
+     
+    map <node*, bool> visited;
+    
+    node* temp = head;
+    
+    while (temp != NULL) {
+        if (visited[temp] == true) {
+            return true;
+        }
+        visited [temp] = true;
+        temp = temp -> next;
+    }
+    return false;
+}
+
 int main() {
     node* tail = NULL;
     
