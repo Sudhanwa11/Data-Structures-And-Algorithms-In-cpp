@@ -45,3 +45,16 @@ node* getstartingnode (node* &head) {
     }
     return slow;
 }
+
+void removeloop (node* &head) {
+    if (head == NULL) {
+        return;
+    }
+    node* start = getstartingnode (head);
+    node* temp = start;
+    while (temp -> next != start) {
+        temp = temp -> next;
+    }
+    temp -> next = NULL;
+}
+
