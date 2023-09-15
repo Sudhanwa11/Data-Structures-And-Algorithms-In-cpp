@@ -8,7 +8,6 @@ bool isCircular(Node* head) {
     }
 
     Node* temp = head -> next;
-
     while (temp != NULL) {
         if (temp -> data == head -> data) {
             return true;
