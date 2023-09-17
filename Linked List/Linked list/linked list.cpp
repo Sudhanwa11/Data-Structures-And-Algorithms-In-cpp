@@ -5,10 +5,6 @@ using namespace std;
 struct Node {
     int val;
     Node* next;
-    Node (int val) {
-        this -> val = val;
-        this -> next = nullptr;
-    }
 };
 
 // Function to create a new node with a given value
