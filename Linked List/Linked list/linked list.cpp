@@ -1,128 +1,113 @@
 #include <iostream>
+
 using namespace std;
 
-class node {
-    public:
-    int data;
-    node* next;
-    
-    node (int data) {
-        this -> data = data;
-        this -> next = NULL;
-    }
-    
-    ~node () {
-        int value = this -> data;
-        if (this ->  next != NULL) {
-            delete next;
-            this -> next = NULL;
-        }
-        cout<< "Memory is freed of value " << value <<endl;
-    }
+// Node structure to represent each node in the linked list
+struct Node {
+    int val;
+    Node* next;
 };
 
-void deletion (node* &head, int position) {
-    if (position == 1) {
-        node* temp = head;
-        head = head -> next;
-        temp -> next = NULL;
-        delete temp;
-    }
-    else {
-        node* current = head;
-        node* previous = NULL;
-        int count = 1;
-        while (count < position) {
-            previous = current;
-            current = current -> next;
-            count++;
-        }
-        
-        previous -> next = current -> next;
-        current -> next = NULL;
-        delete current;
-    }
+// Function to create a new node with a given value
+Node* createNode(int val) {
+    Node* newNode = new Node{val, nullptr};
+    return newNode;
 }
 
-void insertatHead (node* &head, int value) {
-    node* temp = new node(value);
-    temp -> next = head;
-    head = temp;
+// Function to add a node at the end of the linked list
+Node* addNode(Node* head, int val) {
+    Node* newNode = createNode(val);
+
+    if (head == nullptr) {
+        return newNode;
+    }
+
+    Node* temp = head;
+    while (temp->next != nullptr) {
+        temp = temp->next;
+    }
+
+    temp->next = newNode;
+    return head;
 }
 
-void insertatTail (node* &tail, int value) {
-    node* temp = new node(value);
-    tail -> next = temp;
-    tail = temp;
+// Function to add a node at a specific position in the linked list
+Node* addNodeAtPosition(Node* head, int val, int position) {
+    Node* newNode = createNode(val);
+
+    if (position <= 0) {
+        newNode->next = head;
+        return newNode;
+    }
+
+    Node* temp = head;
+    for (int i = 0; i < position - 1 && temp != nullptr; i++) {
+        temp = temp->next;
+    }
+
+    if (temp == nullptr)
+        return head;
+
+    newNode->next = temp->next;
+    temp->next = newNode;
+
+    return head;
 }
 
-void insertatposition (node* &head, node* &tail, int position, int value) {
-    if (position == 1) {
-        insertatHead(head, 1);
-        return;
+// Function to reverse the linked list
+Node* reverseList(Node* head) {
+    Node* prev = nullptr;
+    Node* curr = head;
+
+    while (curr != nullptr) {
+        Node* nextNode = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = nextNode;
     }
-    node* temp = head;
-    int count = 1;
-    
-    while (count < position-1) {
-        temp = temp -> next;
-        count++;
-    }
-    
-    if (temp -> next == NULL) {
-        insertatTail (tail, value);
-        return;
-    }
-    
-    node* insertnode = new node(value);
-    insertnode -> next = temp -> next;
-    temp -> next = insertnode; 
+
+    return prev;  // New head of the reversed list
 }
 
-void printll (node* &head) {
-    node* temp = head;
-    while (temp != NULL) {
-        cout<< temp -> data <<" ";
-        temp = temp -> next;
+// Function to print the linked list
+void printList(Node* head) {
+    Node* temp = head;
+    while (temp != nullptr) {
+        cout << temp->val << " ";
+        temp = temp->next;
     }
-    cout<<endl;
+    cout << endl;
 }
 
 int main() {
-    node* node1 = new node(15);
-    
-    node* head = node1;
-    node* tail = node1;
-    
-    cout<< "inserting 10 at head:-" <<endl;
-    insertatHead (head, 10);
-    printll (head);
-    
-    cout<<endl;
-    
-    cout<< "inserting 20 at tail:-" <<endl;
-    insertatTail (tail, 20);
-    printll (head);
-    
-    cout<<endl;
-    
-    cout<< "inserting 25 at position 4:-" <<endl;
-    insertatposition (head, tail, 4, 25);
-    printll(head);
-    
-    cout<<endl;
-    
-    cout<< "head -> " << head -> data <<endl;
-    cout<< "tail -> " << tail -> data <<endl;
-    
-    cout<<endl;
-    
-    deletion (head, 3);
-    printll (head);
-    
-    cout<<endl;
-    
-    cout<< "head -> " << head -> data <<endl;
-    cout<< "tail -> " << tail -> data <<endl;
+    Node* head = nullptr;
+
+    // Adding nodes to the linked list
+    head = addNode(head, 1);
+    head = addNode(head, 2);
+    head = addNode(head, 3);
+
+    cout << "Original List: ";
+    printList(head);
+
+    // Add a node with value 4 at position 2
+    head = addNodeAtPosition(head, 4, 2);
+
+    cout << "List after adding 4 at position 2: ";
+    printList(head);
+
+    // Reverse the linked list
+    head = reverseList(head);
+
+    cout << "Reversed List: ";
+    printList(head);
+
+    // Clean up the memory (deallocate nodes)
+    while (head != nullptr) {
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+    }
+
     return 0;
 }
