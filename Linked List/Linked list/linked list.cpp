@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 // Node structure to represent each node in the linked list
 struct Node {
     int val;
