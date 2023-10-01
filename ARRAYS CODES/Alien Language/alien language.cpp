@@ -45,6 +45,5 @@ string getAlienLanguage(vector<string> &dictionary, int k) {
         ans += char(st.top() + 'a');  // Convert the stack top (node) to character
         st.pop();  // Pop the stack to access the next character
     }
-
     return ans;  // Return the order of characters in the alien language
 }
