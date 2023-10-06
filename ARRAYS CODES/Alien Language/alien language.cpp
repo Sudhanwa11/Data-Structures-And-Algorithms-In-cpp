@@ -9,6 +9,7 @@ void dfs(int node, vector<bool> &visited, stack<int> &st, vector<int> adj[]) {
     st.push(node);  // Push the current node to the stack after visiting its neighbors
 }
 
+
 string getAlienLanguage(vector<string> &dictionary, int k) {
     // Construct adjacency list
     vector<int> adj[26];  // Each letter is a node (letters 'a' to 'z')
