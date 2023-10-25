@@ -129,6 +129,5 @@ int main() {
 
     // Free memory by deleting the linked list
     delete head;
-
     return 0;
 }
