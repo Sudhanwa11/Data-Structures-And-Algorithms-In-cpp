@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+using namespace std;
+
 vector<int> getSecondOrderElements(int n, vector<int> a) {
     vector <int> ans;
     int size = a.size();
